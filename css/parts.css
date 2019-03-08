@@ -1,0 +1,133 @@
+
+::-moz-selection {
+    background: var(--my-color);
+    color: #fff;
+  }
+  ::selection {
+    background: var(--my-color);
+    color: #fff;
+  }
+
+
+/* All button styles are here */
+
+.button, .active-button{
+    border-top: 1px solid var(--my-color);
+    font-family: "Dosis",sans-serif;
+    letter-spacing: 2px;
+    color:#fff!important;
+    background-color: var(--my-color);
+    font-size: 14px;
+    font-weight: 600;
+    height: 45px;
+    line-height: 43px;
+    cursor: pointer;
+    padding: 0 30px;
+    position: relative; 
+    z-index: 1; 
+    overflow: hidden;
+}
+
+.button:hover{
+    color:  var(--my-color)!important;
+}
+
+.active-button{
+    color: var(--my-color)!important;
+    background-color: #fff;
+    border:1px solid #fff;
+}
+
+.active-button::before{
+    z-index: -1;
+    position: absolute;
+    top:0;
+    left:0;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background:white;
+}
+
+.btn-left-anim,.btn-top-anim{
+    border-bottom: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-radius: 2px;
+}
+
+.btn-left-anim:before, .btn-top-anim:before{
+    background-color: #ffffff;
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s ease 0s;
+    z-index: -1;
+}
+
+ 
+.btn-left-anim:hover::before{
+    opacity: 1;
+    width: 100%;
+  
+}
+
+.btn-top-anim:before{
+    width: 100%;
+    height: 0px;
+}
+
+.btn-top-anim:hover::before{
+    opacity: 1;
+    height: 100%;
+ 
+}
+
+
+
+/*   --------------- Farid Grid portfolio --------------*/
+
+/* Heleki hazir deyil */
+
+/*   --------------- slick slider --------------*/
+
+
+
+.autoplay-slider .slick-next, .autoplay-slider .slick-prev{
+    position: absolute;
+    z-index: 1;
+    background:none;
+    border:none;
+    outline: none;
+    top:50%;
+    display: inline;
+    content: "";
+    font-size: 36px;
+    color: var(--my-color);
+    transition: all .1s ease 0s;
+    transform: translateY(-50%);
+}
+
+
+.autoplay-slider .slick-prev{
+    left: -1%;
+    opacity: 0;
+}
+
+.autoplay-slider .slick-next{
+    right: -1%;
+    opacity: 0;
+}
+
+.carusel-area:hover .slick-prev{
+    left: -2%;
+    opacity: 1;
+}
+
+.carusel-area:hover .slick-next{
+    right: -2%;
+    opacity: 1;
+}
